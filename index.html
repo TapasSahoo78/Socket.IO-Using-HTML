@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Socket App</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        var socket = io();
+        // socket.on('message', function (data) {
+        //     document.write(data);
+        // });
+
+        // socket.on('serverEvent', function (data) {
+        //     document.write(data.description);
+        // });
+
+        //socket.emit('clientEvent', 'Sent an event from the client!');
+
+        // socket.on('broadcast', function (data) {
+        //     document.body.innerHTML = '';
+        //     document.write(data.description);
+        // });
+
+        socket.on('newClientsconnect', function (data) {
+            document.body.innerHTML = '';
+            document.write(data.description);
+        });
+    </script>
+</head>
+
+<body>
+    <h1>My App</h1>
+</body>
+
+</html>

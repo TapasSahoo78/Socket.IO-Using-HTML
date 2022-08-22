@@ -1,0 +1,7 @@
+1. io.sockets.emit :
+=> To broadcast an event to all the clients.we can use the io.sockets.emit method
+
+2. io.broadcast.emit :
+=> This was to send an event to everyone. Now, if we want to send an event to everyone,but the client that caused it(new client on connecting),we can use the socket.broadcast.emit
+
+3. 
